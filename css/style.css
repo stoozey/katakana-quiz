@@ -1,0 +1,784 @@
+@charset "UTF-8";
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize*/
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  background-color: #0d0d16;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #09002d;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-radius: 25px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  border-radius: 25px;
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 0 1rem;
+  max-width: 120rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+p,
+ul {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.text {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 25rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #eb6213;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #eb6213;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #eb6213;
+}
+
+.select-box {
+  border-radius: 25px;
+  display: block;
+  color: #eb6213;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.625rem 0;
+  border: #eb6213 0.3vw solid;
+  margin: 0.5rem 0;
+}
+.select-box p {
+  display: inline;
+  margin: 0;
+}
+.select-box input {
+  display: none;
+}
+
+.select-box:hover {
+  cursor: pointer;
+}
+
+.check {
+  background-color: #eb6213;
+  color: white;
+}
+
+.button-styling {
+  background-color: #eb6213;
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid #eb6213;
+  width: 10rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  font-family: "Noto Sans JP", sans-serif;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3rem;
+  box-shadow: #e72a09 0 0.5rem;
+  outline: none;
+}
+.button-styling:active {
+  box-shadow: #e72a09 0 0.2rem;
+  transform: translateY(0.5rem);
+}
+.button-styling:focus {
+  animation: 1s pulse infinite alternate;
+  outline: #fa931e dotted 2px;
+  outline-offset: -7px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #fa2d09;
+    border-color: #fa2d09;
+    box-shadow: rgb(231, 137, 29) 0 0.5rem;
+  }
+  100% {
+    border-color: #eb6213;
+    background-color: #eb6213;
+    box-shadow: #eb8b1d 0 0.5rem;
+  }
+}
+.quiz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quiz-page ul {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3rem;
+}
+
+.card {
+  border: #b17d60 0.7vw solid;
+  background-color: #b17d60;
+  border-radius: 1rem;
+  width: 15vw;
+  padding: 2vw;
+  margin: 1vw;
+  font-size: 7vw;
+  text-align: center;
+  color: white;
+}
+
+.focused-card {
+  background-color: #e72a09;
+  border-color: #e72a09;
+  animation: grow 0.5s 1;
+  transform: scale(1.1, 1.1);
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
+.card__text {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.card__text.card__text--combo {
+  letter-spacing: -5px;
+}
+
+.card__form {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.card__field {
+  height: 7vw;
+  font-size: 4vw;
+  outline: none;
+  width: 75%;
+  text-align: center;
+  text-transform: lowercase;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  border-color: white;
+  border-style: none;
+}
+
+.correct {
+  background-color: #eb6213;
+  border-color: #eb6213;
+}
+
+.incorrect {
+  background-color: #9c5d5d;
+  border-color: #9c5d5d;
+  animation: wrong 1s linear 1;
+}
+
+@keyframes wrong {
+  0% {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    transform: translateX(0);
+  }
+  10% {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    transform: translateX(3px);
+  }
+  20% {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    transform: translateX(-3px);
+  }
+  30% {
+    transform: translateX(3px);
+  }
+  40% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  70% {
+    transform: translateX(0);
+  }
+  100% {
+    background-color: #9c5d5d;
+    border-color: #9c5d5d;
+  }
+}
+input[type=text]:disabled {
+  background-color: #e8e8e8;
+  color: #d1d1d1;
+  -webkit-text-fill-color: #d1d1d1;
+}
+
+.percent-results {
+  margin-bottom: 4rem;
+}
+
+.results {
+  border-radius: 25px;
+  text-align: center;
+}
+
+a {
+  color: #eb6213;
+}
+
+table {
+  border-radius: 25px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  border-collapse: separate;
+}
+table td {
+  padding: 0.25rem;
+}
+table th {
+  padding: 1rem;
+  font-size: 7vw;
+  background-color: #eb6213;
+}
+table a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.kana-study td {
+  padding-bottom: 2rem;
+}
+
+.kana-header th {
+  border-top: 3px #eb6213 solid;
+}
+.kana-header th:last-child {
+  border-right: 3px #eb6213 solid;
+}
+.kana-header th:first-child {
+  border-left: 3px #eb6213 solid;
+}
+
+.kana-details {
+  font-size: 3vw;
+  color: #eb6213;
+}
+.kana-details td {
+  border-bottom: 3px #eb6213 solid;
+}
+.kana-details td:last-child {
+  border-right: 3px #eb6213 solid;
+}
+.kana-details td:first-child {
+  border-left: 3px #eb6213 solid;
+}
+
+.table-section-top h2 {
+  display: inline;
+}
+.table-section-top p {
+  display: inline;
+}
+
+@media only all and (min-width: 70rem) {
+  body {
+    padding: 0;
+  }
+
+  .select-box {
+    margin: 0.5rem;
+  }
+
+  .incorrect-details {
+    display: flex;
+    justify-content: center;
+  }
+
+  .table-wrap {
+    margin-right: 1rem;
+  }
+
+  .table-wrap:last-child {
+    margin-right: 0;
+  }
+
+  .start {
+
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .checkbox-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
+
+  .checkboxes {
+    display: grid;
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .combo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .card {
+    border: #dd8d5f 0.3rem solid;
+    border-radius: 1rem;
+    width: 8rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .focused-card {
+    border-color: #e72a09;
+  }
+
+  .card__field {
+    height: 4rem;
+    font-size: 2.5rem;
+    width: 90%;
+  }
+
+  .card__text.combo {
+    letter-spacing: -9px;
+  }
+
+  .correct {
+    border-color: #eb6213;
+  }
+
+  .incorrect {
+    border-color: #9c5d5d;
+  }
+
+  table {
+    border-radius: 25px;
+    width: 100%;
+  }
+  table th {
+    font-size: 2vw;
+    width: 2vw;
+  }
+  table td {
+    font-size: 1vw;
+  }
+
+  .kana-details {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

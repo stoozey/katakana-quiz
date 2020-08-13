@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <link rel="stylesheet" href="css/style.css">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <title>Practice Katakana</title>
+
+  <body>
+    <div class="start">
+      <h1>Tofugu (and <a href="https://twitter.com/stoozey_">stoozey</a>)'s Learn Katakana Quiz</h1>
+      <div class="text">
+        <p>
+            This app was originally created by Tofugu, but modified to support Katakana.
+        </p>
+        <p>
+            This app is a companion to Tofugu's Learn Katakana Guide. Use it to
+            practice katakana. If you haven't used the guide katakana yet,
+            <a href="https://www.tofugu.com/japanese/learn-katakana/">
+                check out the guide
+            </a>
+            , then return to practise.
+        </p>
+      </div>
+      <div>
+        <label class="all select-box">
+          <input type="checkbox" />
+          <p>All Katakana</p>
+        </label>
+      </div>
+      <div class="checkbox-container">
+        <div>
+          <h2>Main Katakana</h2>
+          <label class="all-main select-box">
+            <input type="checkbox" />
+            <p>All Main Katakana</p>
+          </label>
+
+          <div class="checkboxes main">
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ァ/a</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ヵ/ka</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>サ/sa</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>タ/ta</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ナ/na</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ハ/ha</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>マ/ma</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ヤ/ya</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ラ/ra</p>
+            </label>
+
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ワ/wa</p>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <h2>Dakuten/Handakuten</h2>
+          <label class="all-dakuten select-box">
+            <input type="checkbox" />
+            <p>All Dakuten Katakana</p>
+          </label>
+          <div class="checkboxes dakuten">
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ガ/ga</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ザ/za</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ダ/da</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>バ/ba</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>パ/pa</p>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <h2>Combination</h2>
+          <label class="all-combo select-box">
+            <input type="checkbox" />
+            <p>All Combination Katakana</p>
+          </label>
+          <div class="checkboxes combo">
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>キャ/kya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>シャ/sha</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>チャ/cha</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ニャ/nya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ヒャ/hya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ミャ/mya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>リャ/rya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ギャ/gya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ジャ/ja</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ヂャ/dya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ビャ/bya</p>
+            </label>
+            <label class="options select-box">
+              <input type="checkbox" />
+              <p>ピャ/pya</p>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button class="press-start button-styling">Start Quiz!</button>
+    </div>
+
+    <div class="quiz-page">
+      <div class="quiz-header">
+        <h2>Type Romaji for the Katakana That You Know</h2>
+        <ul>
+          <li>Type your answer in romaji in the card's text field</li>
+          <li>Press ENTER to submit</li>
+          <li>Repeat for as many cards as you can</li>
+          <li>You can try as many times as you want</li>
+          <li>
+            When you're done press the "Finish Quiz" button at the bottom
+          </li>
+        </ul>
+      </div>
+      <div class="quiz"></div>
+      <div class="quiz-end">
+        <button class="end-quiz button-styling">Finish Quiz</button>
+      </div>
+    </div>
+
+    <div class="results" id="results-area">
+      <h2>View Your Results</h2>
+      <div class="percent-results"></div>
+
+      <div class="incorrect-details">
+        <div class="table-wrap">
+          <div class="table-section-top">
+            <h2>Main Katakana</h2>
+            <p class="main-score"></p>
+          </div>
+          <table class="main-table">
+            <tbody>
+              <tr class="kana-header 0">
+                <th>ァ</th>
+                <th>イ</th>
+                <th>ウ</th>
+                <th>え</th>
+                <th>オ</th>
+              </tr>
+              <tr class="kana-details 0">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 0">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtartrprprubyii-rubyrprprtirtrprprubyii-rubyrprprturtrprprubyii-rubyrprprtertrprprubyii-rubyrprprtortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 1">
+                <th>ヵ</th>
+                <th>キ</th>
+                <th>ク</th>
+                <th>ケ</th>
+                <th>コ</th>
+              </tr>
+              <tr class="kana-details 1">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 1">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtkartrprprubyii-rubyrprprtkirtrprprubyii-rubyrprprtkurtrprprubyii-rubyrprprtkertrprprubyii-rubyrprprtkortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 2">
+                <th>サ</th>
+                <th>シ</th>
+                <th>ス</th>
+                <th>セ</th>
+                <th>ソ</th>
+              </tr>
+              <tr class="kana-details 2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 2">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtsartrprprubyii-rubyrprprtshirtrprprubyii-rubyrprprtsurtrprprubyii-rubyrprprtsertrprprubyii-rubyrprprtsortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 3">
+                <th>タ</th>
+                <th>チ</th>
+                <th>ツ</th>
+                <th>テ</th>
+                <th>ト</th>
+              </tr>
+              <tr class="kana-details 3">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 3">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprttartrprprubyii-rubyrprprtchirtrprprubyii-rubyrprprttsurtrprprubyii-rubyrprprttertrprprubyii-rubyrprprttortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 4">
+                <th>ナ</th>
+                <th>ニ</th>
+                <th>ヌ</th>
+                <th>ネ</th>
+                <th>ノ</th>
+              </tr>
+              <tr class="kana-details 4">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 4">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtnartrprprubyii-rubyrprprtnirtrprprubyii-rubyrprprtnurtrprprubyii-rubyrprprtnertrprprubyii-rubyrprprtnortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 5">
+                <th>ハ</th>
+                <th>ヒ</th>
+                <th>フ</th>
+                <th>ヘ</th>
+                <th>ホ</th>
+              </tr>
+              <tr class="kana-details 5">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 5">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprthartrprprubyii-rubyrprprthirtrprprubyii-rubyrprprthufurtrprprubyii-rubyrprprthertrprprubyii-rubyrprprthortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 6">
+                <th>マ</th>
+                <th>ミ</th>
+                <th>ム</th>
+                <th>メ</th>
+                <th>モ</th>
+              </tr>
+              <tr class="kana-details 6">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 6">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtmartrprprubyii-rubyrprprtmirtrprprubyii-rubyrprprtmurtrprprubyii-rubyrprprtmertrprprubyii-rubyrprprtmortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 7">
+                <th>ヤ</th>
+                <th>ユ</th>
+                <th>ヨ</th>
+              </tr>
+              <tr class="kana-details 7">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 7">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtyartrprprubyii-rubyrprprtyurtrprprubyii-rubyrprprtyortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 8">
+                <th>ラ</th>
+                <th>リ</th>
+                <th>ル</th>
+                <th>レ</th>
+                <th>ロ</th>
+              </tr>
+              <tr class="kana-details 8">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 8">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtrartrprprubyii-rubyrprprtrirtrprprubyii-rubyrprprtrurtrprprubyii-rubyrprprtrertrprprubyii-rubyrprprtrortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 9">
+                <th>ワ</th>
+                <th>ヲ</th>
+                <th>ん</th>
+              </tr>
+              <tr class="kana-details 9">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 9">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtwartrprprubyii-rubyrprprtwortrprprubyii-rubyrprprtnrtrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <div class="table-section-top">
+            <h2>Dakuten Katakana</h2>
+            <p class="dakuten-score"></p>
+          </div>
+          <table class="dakuten-table">
+            <tbody>
+              <tr class="kana-header 10">
+                <th>ガ</th>
+                <th>ギ</th>
+                <th>グ</th>
+                <th>ゲ</th>
+                <th>ゴ</th>
+              </tr>
+              <tr class="kana-details 10">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 10">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#ii-rubyrprprtgartrprprubyii-rubyrprprtgirtrprprubyii-rubyrprprtgurtrprprubyii-rubyrprprtgertrprprubyii-rubyrprprtgortrprpruby"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 11">
+                <th>ザ</th>
+                <th>ジ</th>
+                <th>ズ</th>
+                <th>ゼ</th>
+                <th>ゾ</th>
+              </tr>
+              <tr class="kana-details 11">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 11">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#section-1"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 12">
+                <th>ダ</th>
+                <th>ヂ</th>
+                <th>ヅ</th>
+                <th>デ</th>
+                <th>ド</th>
+              </tr>
+              <tr class="kana-details 12">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 12">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#section-2"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 13">
+                <th>バ</th>
+                <th>ビ</th>
+                <th>ブ</th>
+                <th>ベ</th>
+                <th>ボ</th>
+              </tr>
+              <tr class="kana-details 13">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 13">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#section-3"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 14">
+                <th>パ</th>
+                <th>ピ</th>
+                <th>プ</th>
+                <th>ペ</th>
+                <th>ポ</th>
+              </tr>
+              <tr class="kana-details 14">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 14">
+                <td colspan="5">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#section-3"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <div class="table-section-top">
+            <h2>Combo Katakana</h2>
+            <p class="combo-score"></p>
+          </div>
+          <table class="combo-table">
+            <tbody>
+              <tr class="kana-header 15">
+                <th>キャ</th>
+                <th>キュ</th>
+                <th>キョ</th>
+              </tr>
+              <tr class="kana-details 15">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 15">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 16">
+                <th>シャ</th>
+                <th>シュ</th>
+                <th>ショ</th>
+              </tr>
+              <tr class="kana-details 16">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 16">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 17">
+                <th>チャ</th>
+                <th>チュ</th>
+                <th>チョ</th>
+              </tr>
+              <tr class="kana-details 17">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 17">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 18">
+                <th>ニャ</th>
+                <th>ニュ</th>
+                <th>ニョ</th>
+              </tr>
+              <tr class="kana-details 18">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 18">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 19">
+                <th>ヒャ</th>
+                <th>ヒュ</th>
+                <th>ヒョ</th>
+              </tr>
+              <tr class="kana-details 19">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 19">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 20">
+                <th>ミャ</th>
+                <th>ミュ</th>
+                <th>ミョ</th>
+              </tr>
+              <tr class="kana-details 20">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 20">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 21">
+                <th>リャ</th>
+                <th>リュ</th>
+                <th>リョ</th>
+              </tr>
+              <tr class="kana-details 21">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 21">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 22">
+                <th>ギャ</th>
+                <th>ギュ</th>
+                <th>ギョ</th>
+              </tr>
+              <tr class="kana-details 22">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 22">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 23">
+                <th>ジャ</th>
+                <th>ジュ</th>
+                <th>ジョ</th>
+              </tr>
+              <tr class="kana-details 23">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 23">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 24">
+                <th>ヂャ</th>
+                <th>ヂュ</th>
+                <th>ヂョ</th>
+              </tr>
+              <tr class="kana-details 24">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 24">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 25">
+                <th>ビャ</th>
+                <th>ビュ</th>
+                <th>ビョ</th>
+              </tr>
+              <tr class="kana-details 25">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 25">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+              <tr class="kana-header 26">
+                <th>ピャ</th>
+                <th>ピュ</th>
+                <th>ピョ</th>
+              </tr>
+              <tr class="kana-details 26">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="kana-study 26">
+                <td colspan="3">
+                  <a
+                    href="https://www.tofugu.com/japanese/learn-katakana#combination-katakana"
+                    >↪ Study again</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text">
+        <p>
+          Feeling like you can recall all the katakana? Your next step in
+          Japanese literacy is kanji. We built a program that uses mnemonics,
+          spaced repetition, and more to teach Japanese learners 2,000+ kanji
+          and 6,000+ vocabulary words. You can
+          <a href="https://www.wanikani.com/"
+            >try the first three levels of WaniKani for free</a
+          >, no credit card required.
+        </p>
+
+        <p>Or study katakana again!</p>
+      </div>
+
+      <button class="restart button-styling">Restart Quiz</button>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+  <p>
+
+    
+  </p>
+  <img src="src/funnyassshibe.jpg" alt="He's a funny guy." style="width: 250px; height: 250px;">
+</html>
