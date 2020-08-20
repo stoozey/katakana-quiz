@@ -11258,9 +11258,9 @@
 	    });
 	  });
 
-	  // different ways to write ん
+	  // different ways to write ン
 	  ['n', "n'", 'xn'].forEach(nChar => {
-	    subtreeOf(nChar)[''] = 'ん';
+	    subtreeOf(nChar)[''] = 'ン';
 	  });
 
 	  // c is equivalent to k, but not for chi, cha, etc. that's why we have to make a copy of k
@@ -11320,7 +11320,7 @@
 	    const subtree = kanaTree[consonant];
 	    subtree[consonant] = addTsu(subtree);
 	  });
-	  // nn should not be っん
+	  // nn should not be っン
 	  delete kanaTree.n.n;
 	  // solidify the results, so that there there is referential transparency within the tree
 	  return Object.freeze(JSON.parse(JSON.stringify(kanaTree)));
@@ -11340,8 +11340,8 @@
 	function IME_MODE_MAP(map) {
 	  // in IME mode, we do not want to convert single ns
 	  const mapCopy = JSON.parse(JSON.stringify(map));
-	  mapCopy.n.n = { '': 'ん' };
-	  mapCopy.n[' '] = { '': 'ん' };
+	  mapCopy.n.n = { '': 'ン' };
+	  mapCopy.n[' '] = { '': 'ン' };
 	  return mapCopy;
 	}
 
@@ -11428,7 +11428,7 @@
 	 * toKana('ONAJI buttsuuji')
 	 * // => 'オナジ ブっツウジ'
 	 * toKana('座禅‘zazen’スタイル')
-	 * // => '座禅「ザゼん」スタイル'
+	 * // => '座禅「ザゼン」スタイル'
 	 * toKana('batsuge-mu')
 	 * // => 'バツゲーム'
 	 * toKana('!?.:/,~-‘’“”[](){}') // Punctuation conversion
@@ -11721,7 +11721,7 @@
 	  '　': ' '
 	};
 
-	// んイ -> n'i
+	// ンイ -> n'i
 	const AMBIGUOUS_VOWELS = ['ァ', 'イ', 'ウ', 'エ', 'オ', 'ャ', 'ュ', 'ョ'];
 	const SMALL_Y$1 = { ャ: 'ya', ュ: 'yu', ョ: 'yo' };
 	const SMALL_Y_EXTRA = { ィ: 'yi', ェ: 'ye' };
@@ -11835,18 +11835,18 @@
 	  });
 
 	  AMBIGUOUS_VOWELS.forEach(kana => {
-	    setTrans(`ん${kana}`, `n'${subtreeOf(kana)['']}`);
+	    setTrans(`ン${kana}`, `n'${subtreeOf(kana)['']}`);
 	  });
 
 	  // NOTE: could be re-enabled with an option?
-	  // // んバ -> mbo
+	  // // ンバ -> mbo
 	  // const LABIAL = [
 	  //   'バ', 'ビ', 'ブ', 'ベ', 'ボ',
 	  //   'パ', 'ピ', 'プ', 'ペ', 'ポ',
 	  //   'マ', 'ミ', 'ム', 'メ', 'モ',
 	  // ];
 	  // LABIAL.forEach((kana) => {
-	  //   setTrans(`ん${kana}`, `m${subtreeOf(kana)['']}`);
+	  //   setTrans(`ン${kana}`, `m${subtreeOf(kana)['']}`);
 	  // });
 
 	  return Object.freeze(JSON.parse(JSON.stringify(romajiTree)));
@@ -11948,7 +11948,7 @@
 	  return katakanaToHiragana(input, toRomaji);
 	}
 
-	var kana = [["ァ", "イ", "ウ", "エ", "オ"], ["ヵ", "キ", "ク", "ケ", "コ"], ["サ", "シ", "ス", "セ", "ソ"], ["タ", "チ", "ツ", "テ", "ト"], ["ナ", "ニ", "ヌ", "ネ", "ノ"], ["ハ", "ヒ", "フ", "ヘ", "ホ"], ["マ", "ミ", "ム", "メ", "モ"], ["ヤ", "ユ", "ヨ"], ["ラ", "リ", "ル", "レ", "ロ"], ["ワ", "ヲ", "ん"], ["ガ", "ギ", "グ", "ゲ", "ゴ"], ["ザ", "ジ", "ズ", "ゼ", "ゾ"], ["ダ", "ヂ", "ヅ", "デ", "ド"], ["バ", "ビ", "ブ", "ベ", "ボ"], ["パ", "ピ", "プ", "ペ", "ポ"], ["キァ", "キュ", "キョ"], ["シァ", "シュ", "ショ"], ["チァ", "チュ", "チョ"], ["ニァ", "ニュ", "ニョ"], ["ヒァ", "ヒュ", "ヒョ"], ["ミァ", "ミュ", "ミョ"], ["リァ", "リュ", "リョ"], ["ギァ", "ギュ", "ギョ"], ["ジァ", "ジュ", "ジョ"], ["ヂァ", "ヂュ", "ヂョ"], ["ビァ", "ビュ", "ビョ"], ["ピァ", "ピュ", "ピョ"]];
+	var kana = [["ァ", "イ", "ウ", "エ", "オ"], ["ヵ", "キ", "ク", "ケ", "コ"], ["サ", "シ", "ス", "セ", "ソ"], ["タ", "チ", "ツ", "テ", "ト"], ["ナ", "ニ", "ヌ", "ネ", "ノ"], ["ハ", "ヒ", "フ", "ヘ", "ホ"], ["マ", "ミ", "ム", "メ", "モ"], ["ヤ", "ユ", "ヨ"], ["ラ", "リ", "ル", "レ", "ロ"], ["ワ", "ヲ", "ン"], ["ガ", "ギ", "グ", "ゲ", "ゴ"], ["ザ", "ジ", "ズ", "ゼ", "ゾ"], ["ダ", "ヂ", "ヅ", "デ", "ド"], ["バ", "ビ", "ブ", "ベ", "ボ"], ["パ", "ピ", "プ", "ペ", "ポ"], ["キァ", "キュ", "キョ"], ["シァ", "シュ", "ショ"], ["チァ", "チュ", "チョ"], ["ニァ", "ニュ", "ニョ"], ["ヒァ", "ヒュ", "ヒョ"], ["ミァ", "ミュ", "ミョ"], ["リァ", "リュ", "リョ"], ["ギァ", "ギュ", "ギョ"], ["ジァ", "ジュ", "ジョ"], ["ヂァ", "ヂュ", "ヂョ"], ["ビァ", "ビュ", "ビョ"], ["ピァ", "ピュ", "ピョ"]];
 
 	var copyArray = function makeCopyOfArray(source) {
 	  var array = [];
